@@ -58,7 +58,7 @@ function App() {
     );
 
     async function populateWeatherData() {
-        const response = await fetch('api/weatherforecast');
+        const response = await fetch('https://localhost:7248/weatherforecast');
         if (response.ok) {
             const data = await response.json();
             setForecasts(data as Forecast[]);
